@@ -1,0 +1,27 @@
+# 115. <Link>와 NextJS 버전 13
+
+NextJS 13 이전 버전에서는 `<Link>` 태그 안에 중첩된 `<a>` 요소를 넣어야 커스텀 속성(className 등)을 앵커 요소에 추가할 수 있었습니다.
+
+예를 들어, 다음은 NextJS 13 이전 버전에서 유효하지 않은 코드 예시입니다.
+
+!https://img-c.udemycdn.com/redactor/raw/article_lecture/2022-12-08_08-01-55-8530e776dc3cc173eaecb69275035811.PNG
+
+대신, 다음과 같이 작성해야 합니다.
+
+!https://img-c.udemycdn.com/redactor/raw/article_lecture/2022-12-08_08-01-55-0d210f127dd542e4242188c998972876.PNG
+
+`<Link>` 태그 안에 다른 추가 요소를 넣을 때도 같은 솔루션을 적용할 수 있습니다.
+
+`<a>`요소로 추가로 넣은 요소(빈 요소일 수 있음)를 감싸야 합니다:
+
+!https://img-c.udemycdn.com/redactor/raw/article_lecture/2022-12-08_08-01-55-1d6394adda8d2edd845b2543fb5e5d04.PNG
+
+NextJS 13 혹은 상위 버전 사용 시에는 위 과정이 필요없고, 그냥 다음과 같이 코드를 작성하면 됩니다:
+
+!https://img-c.udemycdn.com/redactor/raw/article_lecture/2022-12-08_08-01-55-f143f7be86985c5ce62739d840ae6222.PNG
+
+본 강의는 NextJS 13버전 release 이전에 녹화되었기 때문에, **다음 강의에서는 NextJS 13 이전 버전이 사용됩니다.**
+
+13 버전을 쓰신다면( `package.json`  파일을 통해 확인하세요),
+
+다음 강의의 **솔루션을 적용하지 마시고**, 앞서 설명해드린 대로 `<a>`요소 없이 코드를 작성하세요.
