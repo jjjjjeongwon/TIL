@@ -7,7 +7,7 @@ function isInvaildText(text) {
   return !text || text.trim() === "";
 }
 
-export async function shareMeal(formData) {
+export async function shareMeal(prevState, formData) {
   const meal = {
     title: formData.get("title"),
     summary: formData.get("summary"),
@@ -27,7 +27,9 @@ export async function shareMeal(formData) {
     !meal.image ||
     meal.image.size === 0
   ) {
-    throw new Error("Invaild input");
+    return {
+      message: "Invaild input.",
+    };
   }
 
   await saveMeal(meal);
